@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingTop="12dp"
+            android:paddingRight="12dp">
+
+            <RadioButton
+                android:id="@+id/btn_normal_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="기본지도"/>
+
+            <RadioButton
+                android:id="@+id/btn_cadastral_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="지적편집도"/>
+
+            <RadioButton
+                android:id="@+id/btn_skyview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="스카이뷰"/>
+            <RadioButton
+                android:id="@+id/btn_skyview_3d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3D 스카이뷰"/>
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:paddingRight="12dp">
+
+            <CheckBox
+                android:id="@+id/ck_traffic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Traffic Info"/>
+
+            <CheckBox
+                android:id="@+id/ck_roadview_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RoadView Line"/>
+
+            <CheckBox
+                android:id="@+id/ck_cctv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CCTV"/>
+
+            <CheckBox
+                android:id="@+id/ck_bicycle_road"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bicycle Road"/>
+
+            <CheckBox
+                android:id="@+id/ck_hill_shading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hill shading"/>
+
+            <CheckBox
+                android:id="@+id/ck_hybrid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hybrid"/>
+
+            <CheckBox
+                android:id="@+id/ck_aerial_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AerialPhoto"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray" />
+
+    <com.kakao.vectormap.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

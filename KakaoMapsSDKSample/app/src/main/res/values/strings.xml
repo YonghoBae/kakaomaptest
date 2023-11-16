@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KakaoMaps Api Demo</string>
+
+    <string name="kakao_map">kakao_map</string>
+</resources>

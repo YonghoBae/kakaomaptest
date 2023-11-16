@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_0">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_balloon_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Balloon show"
+                android:textAllCaps="false"
+                android:layout_marginRight="@dimen/padding_10"
+                android:onClick="onButtonClicked"/>
+
+            <Button
+                android:id="@+id/btn_balloon_hide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Balloon hide"
+                android:textAllCaps="false"
+                android:onClick="onButtonClicked"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mapview_divider" />
+
+    <com.kakao.vectormap.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

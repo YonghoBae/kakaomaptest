@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kakao.maps.open.android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.V2api">
+
+        <meta-data
+            android:name="com.kakao.vectormap.APP_KEY"
+            android:value="ad71738b946133694ae01c6a356b0458"/>
+
+        <activity android:name="com.kakao.maps.open.android.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.kakao.maps.open.android.kakaomap.KakaoMapDemoListActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.kakaomap.MapStartDemoActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.kakaomap.MapTypeOverlayDemoActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.kakaomap.ViewportPaddingChangeDemoActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.kakaomap.ScreenPointToLatLngActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.kakaomap.PoiDemoActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.kakaomap.CompassScaleBarActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.camera.CameraDemoListActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.camera.CameraUpdateDemoActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.camera.CameraFitPointsDemoActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.label.LabelDemoListActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.label.LabelOverviewActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.label.LabelTransformActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.label.LabelRankDemoActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.label.LabelChangeDemoActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.dimscreen.DimScreenOverviewActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.shape.ShapeDemoListActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.shape.PolygonOverviewActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.shape.PolylineOverviewActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.route.RouteLineOverviewActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.route.RouteLineDemoListActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.route.RouteLineChangeDemoActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.mapwidget.InfoWindowOverviewActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.etc.EtcDemoListActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.etc.MapCaptureDemoActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+        <activity android:name="com.kakao.maps.open.android.etc.CalloutBalloonStyleDemoActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"/>
+    </application>
+
+</manifest>

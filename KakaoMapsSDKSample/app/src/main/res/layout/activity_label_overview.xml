@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_0">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/ck_icon_only"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_1"
+                android:text="Icon Only"
+                android:onClick="onCheckBoxClicked"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/ck_text_only"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_1"
+                android:text="Text Only"
+                android:onClick="onCheckBoxClicked"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/ck_icon_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_1"
+                android:text="Icon + Text"
+                android:onClick="onCheckBoxClicked"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/ck_by_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_1"
+                android:text="ZoomLevel 별로\n다른 스타일"
+                android:onClick="onCheckBoxClicked"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/ck_with_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_1"
+                android:text="Badge 넣은\n스타일"
+                android:onClick="onCheckBoxClicked"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/ck_move_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_1"
+                android:text="움직이는\nLabel"
+                android:onClick="onCheckBoxClicked"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/ck_anim_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_1"
+                android:text="애니메이션\nLabel"
+                android:onClick="onCheckBoxClicked"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/ck_wave_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_1"
+                android:text="흐르는글씨"
+                android:onClick="onCheckBoxClicked"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/ck_animations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_1"
+                android:text="Sharing\nTransform"
+                android:onClick="onCheckBoxClicked"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mapview_divider" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.kakao.vectormap.MapView
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/translucent"
+            android:layout_alignParentBottom="true"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/tv_camera_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

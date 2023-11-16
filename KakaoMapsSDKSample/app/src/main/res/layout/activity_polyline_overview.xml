@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/ck_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_1"
+                android:text="Circle"
+                android:onClick="onCheckBoxClicked"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/ck_rectangle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_1"
+                android:text="Rectangle"
+                android:onClick="onCheckBoxClicked"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/ck_multi_polyline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_1"
+                android:text="Multi\nPolyline"
+                android:onClick="onCheckBoxClicked"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/ck_level_polyline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_1"
+                android:text="ZoomLevel 별로\n다른 스타일"
+                android:onClick="onCheckBoxClicked"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/ck_area_polyline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_1"
+                android:text="Area\nPolyline"
+                android:onClick="onCheckBoxClicked"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mapview_divider"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.kakao.vectormap.MapView
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/translucent"
+            android:layout_alignParentBottom="true"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/tv_camera_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/desc_14"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

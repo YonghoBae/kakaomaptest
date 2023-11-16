@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MapType"
+        android:textSize="@dimen/title_18"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:paddingTop="@dimen/padding_1"
+        android:paddingLeft="@dimen/padding_1"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_1"
+        android:layout_marginBottom="@dimen/margin_7">
+
+        <RadioButton
+            android:id="@+id/btn_normal_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="기본지도"
+            android:layout_marginRight="@dimen/margin_7"
+            android:onClick="onMapTypeClicked"/>
+
+        <RadioButton
+            android:id="@+id/btn_skyview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="스카이뷰"
+            android:onClick="onMapTypeClicked"/>
+
+    </RadioGroup>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding_1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MapOverlay"
+                android:textSize="@dimen/title_18"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:id="@+id/ck_roadview_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ROADVIEW_LINE"
+                    android:onClick="onMapOverlayClicked" />
+
+                <CheckBox
+                    android:id="@+id/ck_bicycle_road"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BICYCLE_ROAD"
+                    android:onClick="onMapOverlayClicked"/>
+
+                <CheckBox
+                    android:id="@+id/ck_hill_shading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HILLSHADING"
+                    android:onClick="onMapOverlayClicked"/>
+
+                <CheckBox
+                    android:id="@+id/ck_hybrid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SKYVIEW_HYBRID"
+                    android:onClick="onMapOverlayClicked"/>
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mapview_divider"/>
+
+    <com.kakao.vectormap.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

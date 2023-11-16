@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_10">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/ck_simple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_1"
+                android:text="1가지\n스타일"
+                android:onClick="onCheckBoxClicked"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/ck_curved_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_1"
+                android:text="곡선있는\n라인"
+                android:onClick="onCheckBoxClicked"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/ck_pattern"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_1"
+                android:text="패턴있는\n스타일"
+                android:onClick="onCheckBoxClicked"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/ck_multi_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_1"
+                android:text="여러가지\n스타일"
+                android:onClick="onCheckBoxClicked"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/ck_by_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_1"
+                android:text="ZoomLevel 마다\n다른 스타일"
+                android:onClick="onCheckBoxClicked"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mapview_divider"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.kakao.vectormap.MapView
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/translucent"
+            android:layout_alignParentBottom="true"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/tv_camera_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/desc_14"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_1">
+
+        <TextView
+            android:text="Viewport 크기: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/title"
+            android:textSize="@dimen/title_16"
+            android:layout_marginBottom="@dimen/margin_7"/>
+
+        <TextView
+            android:id="@+id/tv_viewport_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_0"
+            android:textSize="@dimen/desc_16" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding_1">
+
+        <TextView
+            android:text="Padding 크기: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/title"
+            android:textSize="@dimen/title_16"
+            android:layout_marginBottom="@dimen/margin_7"/>
+
+        <TextView
+            android:id="@+id/tv_padding_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_0"
+            android:textSize="@dimen/desc_16"
+            app:autoSizeTextType="uniform"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_1">
+
+        <Button
+            android:id="@+id/btn_set_viewport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="setViewport"
+            android:textAllCaps="false"
+            android:layout_marginRight="@dimen/margin_7"
+            android:onClick="onButtonClicked" />
+
+        <Button
+            android:id="@+id/btn_set_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="setPadding"
+            android:textAllCaps="false"
+            android:onClick="onButtonClicked" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mapview_divider"/>
+
+    <com.kakao.vectormap.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
