@@ -20,7 +20,7 @@
         android:theme="@style/Theme.Km"
         tools:targetApi="31">
         <meta-data
-            android:name="com.kakao.vectormap.APP_KEY"
+            android:name="com.kakao.sdk.AppKey"
             android:value="ad71738b946133694ae01c6a356b0458"/>
         <activity
             android:name=".MainActivity"

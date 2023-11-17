@@ -2,6 +2,7 @@ package com.example.km;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.kakao.vectormap.KakaoMap;
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }, new KakaoMapReadyCallback() {
             @Override
-            public void onMapReady(KakaoMap kakaoMap) {
+            public void onMapReady(@NonNull KakaoMap kakaoMap) {
                 // 인증 후 API 가 정상적으로 실행될 때 호출됨
             }
         });
